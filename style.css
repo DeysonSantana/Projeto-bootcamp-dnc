@@ -1,53 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap");
 
-body{
-    margin: 0px;
-    padding: 0px;
-    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
-    background-repeat: no-repeat;
+/* Variáveis globais do CSS */
+:root {
+  --azuk-dnc: #0c70f2;
+  --preto-dnc: #303030;
+  --cinza-hover: #c9c9c9;
+  --fonte-padrao: "Inter";
 }
 
-#principal{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    border: solid 1px black;
-    background-color: #303030;
-    border-bottom: 1px solid #bababa;
-    justify-content: space-between; /*espaço em entre dos elementos*/
+body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  background: linear-gradient(
+      180deg,
+      rgba(12, 112, 242, 0.5) 19.91%,
+      rgba(12, 112, 242, 0) 24.84%
+    ),
+    #303030;
+  background-repeat: no-repeat;
 }
 
-    #principal div a {
-        font-family: 'Inter', sans-serif;
-        font-size: 25px;
-        font-weight: 600;
-        color: white;
-        text-decoration: none;
-    }
+#principal {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  border: solid 1px black;
+  background-color: var(--preto-dnc);
+  border-bottom: 1px solid #bababa;
+  justify-content: space-between; /*espaço em entre dos elementos*/
+}
 
-    #principal div a:hover {
-        color: #cccccc;
-    }
+#principal div a {
+  font-family: var(--fonte-padrao);
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
 
-    #principal button {
-        margin-right: 5%;
-        background-color: #0C70F2;
-        border: 0px;
-        height: 40px;
-        width: 80px;
-        font-family: 'Inter', sans-serif;
-        font-size: 20px;
-        font-weight: 600;
-        color: white;
-        box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
-        cursor: pointer;
-    }
+#principal div a:hover {
+  color: #cccccc;
+}
 
-    #menu{
-        display: flex;
-        margin-left: 5%;
-        align-items: center;
-        width: 45%;
-        justify-content: space-around;  /*espaço em volta dos elementos*/
-    }
+#principal button {
+  margin-right: 5%;
+  background-color: var(--azuk-dnc);
+  border: 0px;
+  height: 40px;
+  width: 80px;
+  font-family: var(--fonte-padrao);
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
+  cursor: pointer;
+}
+
+#menu {
+  display: flex;
+  margin-left: 5%;
+  align-items: center;
+  width: 45%;
+  justify-content: space-around; /*espaço em volta dos elementos*/
+}
+
+/* Seção princiapa */
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+header {
+  color: wheat;
+  font-family: var(--fonte-padrao);
+}
+
+header h1 {
+  font-size: 80px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+header .invert {
+  background-color: black;
+  font-weight: bold;
+  padding: 5px;
+}
+
+/* Formulário */
+
+form {
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: var(--fonte-padrao);
+  width: 600px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+form input {
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+form input::placeholder {
+  color: rgba(57, 57, 57, 0.5);
+}
+
+form label {
+  margin: 10px 0px 10px 0px; /*direão do relógio*/
+}
+
+.checkbox-itens {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.checkbox-itens label {
+  font-size: 23px;
+}
+
+#caixa {
+  transform: scale(1.7);
+}
+
+#botao-cadastar {
+  margin-top: 100px;
+  background-color: rgba(12, 112, 242, 0.9);
+  color: white;
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 32px;
+  font-weight: 600;
+  font-size: var(--fonte-padrao);
+  box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+  cursor: pointer;
+}
