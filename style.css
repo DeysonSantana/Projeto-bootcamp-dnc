@@ -162,3 +162,161 @@ form label {
   box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
   cursor: pointer;
 }
+
+/* Foother */
+
+footer {
+  background-color: var(--azuk-dnc);
+  width: 100%;
+}
+
+footer .linha1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+footer nav {
+  display: flex;
+  height: 330px;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer h5 {
+  text-align: center;
+  color: white;
+  font-weight: 800;
+  font-family: var(--fonte-padrao);
+  font-size: 18px;
+  background-color: var(--preto-dnc);
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 15px;
+}
+
+footer ul li {
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  font-family: var(--fonte-padrao);
+  font-size: 18px;
+  margin: 20px 0px 0px 20px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: var(--cinza-hover);
+}
+
+footer .endereco {
+  width: 25%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: var(--fonte-padrao);
+  color: white;
+  line-height: 30px;
+}
+
+footer .linha2 {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  padding: 10px;
+}
+
+footer .linha2 a {
+  font-family: var(--fonte-padrao);
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+footer .linha2 a:first-child {
+  border-right: solid 2px white;
+}
+
+/* Responsivo para tela de até 600px de largura */
+
+@media only screen and (max-width: 600px) {
+  /* Menu */
+  #principal {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+  }
+
+  #menu {
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+  }
+
+  #menu a {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+
+  #principal button {
+    width: 100%;
+    margin: 0px;
+  }
+
+  /* seção */
+
+  section header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  section h1 {
+    font-size: 38px;
+  }
+  section h2 {
+    font-size: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Form */
+
+  form {
+    width: 85%;
+    font-size: 20px;
+  }
+
+  .checkbox-itens label {
+    font-size: 13px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* Footer */
+
+  footer  .linha1 {
+    flex-direction: column;
+  }
+
+  footer .endereco {
+    width: 85%;
+    margin-bottom: 20px;
+  }
+
+}
